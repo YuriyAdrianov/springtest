@@ -79,7 +79,7 @@ public class StuffController {
 
     @PostMapping("/stuff/search")
     public String search(@ModelAttribute("product") Product product, Model model) {
-        // get one person via id from DAO and display him on view
+        // get one via id from DAO and display him on view
         if(productDAO.show(product.getId()) == null) {
             return "stuff/notfound";
         }
