@@ -1,7 +1,6 @@
 package ru.yuriy.springtest.dao;
 
 import org.springframework.jdbc.core.RowMapper;
-import ru.yuriy.springtest.models.Person;
 import ru.yuriy.springtest.models.Product;
 
 import java.sql.ResultSet;
