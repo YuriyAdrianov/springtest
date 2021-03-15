@@ -6,9 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import ru.yuriy.springtest.dao.PersonDAO;
 import ru.yuriy.springtest.dao.ProductDAO;
-import ru.yuriy.springtest.models.Person;
 import ru.yuriy.springtest.models.Product;
 
 import javax.validation.Valid;
@@ -38,7 +36,7 @@ public class StuffController {
 
     @GetMapping("/stuff/{id}")
     public String show(@PathVariable("id") int id, Model model) {
-        // get one person via id from DAO and display him on view
+        // get one via id from DAO and display him on view
         model.addAttribute("product", productDAO.show(id));
         return "stuff/show";
     }
