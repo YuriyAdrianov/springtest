@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to CRUD API</title>
+</head>
+<body>
+<form th:action="@{/stuff}">
+    <input type="submit" value="Show me all people!">
+</form>
+
+<br/>
+
+<form th:method="POST" th:action="@{/stuff/search}" th:object="${product}">
+    <label for="id">Enter id: </label>
+    <input type="text" th:value="*{id}" name="id" id="id"/>
+    <br/>
+    <input type="submit" value="Show me!">
+</form>
+
+</body>
+</html>
